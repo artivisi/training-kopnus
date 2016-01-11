@@ -1,6 +1,6 @@
 # Training Spring - AngularJS #
 
-Materi training:
+## Materi training ##
 
 * Spring Fundamental
 * Spring Boot
@@ -8,7 +8,7 @@ Materi training:
 * OAuth 2.0
 * AngularJS
 
-Tools dan Software
+## Tools dan Software ##
 
 * PostgreSQL
 * Java 8
@@ -16,4 +16,7 @@ Tools dan Software
 * Text Editor
 * [Git](http://git-scm.com/). Cara instalasi untuk Windows bisa dibaca [di sini](http://software.endy.muhardin.com/aplikasi/instalasi-git-di-windows/)
 
+## Catatan Training ##
 
+* [Maven](materi/maven.md)
+* [Git](materi/git.md)
