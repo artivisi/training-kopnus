@@ -1,0 +1,6 @@
+# Mac Ignore
+.DS_Store
+
+# Vim
+*.swp
+
