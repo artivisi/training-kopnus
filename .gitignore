@@ -4,3 +4,9 @@
 # Vim
 *.swp
 
+# Maven
+target
+
+# Eclipse
+.project
+.classpath
