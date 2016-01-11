@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="koneksi" class="com.artivisi.halo.spring.ioc.KoneksiDatabase">
+        <property name="server" value="localhost"/>
+        <property name="port" value="4321"/>
+        <property name="namaDatabase" value="belajarSpring"/>
+        <property name="username" value="demo"/>
+        <property name="password" value="321"/>
+    </bean>
+    
+    <bean id="produkDao" class="com.artivisi.halo.spring.ioc.ProdukDao">
+        <constructor-arg ref="koneksi" />
+    </bean>
+
+</beans>
