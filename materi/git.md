@@ -7,6 +7,7 @@
 
 ## Mengelola File ##
 
+* Melihat kondisi working folder : `git status`
 * Melihat perubahan : `git diff`
 * Menyiapkan perubahan yang akan disimpan : `git add namafile` atau `git add .` (untuk semua file rekursif)
 * Menyimpan perubahan : `git commit -m "keterangan perubahan"`
@@ -18,4 +19,4 @@
 * Melihat remote repo yang sudah didaftarkan : `git remote -v`
 * Mengupload isi repo lokal ke remote : `git push nama-remote nama-branch`
 * Mengunduh perubahan dari remote : `git pull`
-
+* Mengganti URL remote repo : `git remote set-url nama-remote url-repo`
