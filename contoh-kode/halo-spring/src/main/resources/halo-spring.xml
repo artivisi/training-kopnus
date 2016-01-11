@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
     xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean id="koneksi" class="com.artivisi.halo.spring.ioc.KoneksiDatabase">
         <property name="server" value="localhost"/>
@@ -12,8 +15,6 @@
         <property name="password" value="321"/>
     </bean>
     
-    <bean id="produkDao" class="com.artivisi.halo.spring.ioc.ProdukDao">
-        <constructor-arg ref="koneksi" />
-    </bean>
-
+    <context:component-scan base-package="com.artivisi.halo.spring"/>
+    
 </beans>
