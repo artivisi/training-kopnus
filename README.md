@@ -12,8 +12,8 @@ Tools dan Software
 
 * PostgreSQL
 * Java 8
-* [Maven](http://maven.apache.org/)
+* [Maven](http://maven.apache.org/). Cara instalasi bisa dibaca [di sini](http://software.endy.muhardin.com/java/persiapan-coding-java/)
 * Text Editor
-* [Git](http://git-scm.com/)
+* [Git](http://git-scm.com/). Cara instalasi untuk Windows bisa dibaca [di sini](http://software.endy.muhardin.com/aplikasi/instalasi-git-di-windows/)
 
 
