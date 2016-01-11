@@ -1,6 +1,12 @@
 package com.artivisi.halo.spring.ioc;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class ProdukDao {
+    
+    @Autowired
     private KoneksiDatabase koneksi;
 
     public ProdukDao(){}
