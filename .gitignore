@@ -10,3 +10,4 @@ target
 # Eclipse
 .project
 .classpath
+.settings
