@@ -5,8 +5,7 @@ CREATE TABLE institusi (
     nama character varying(255) NOT NULL,
     telepon character varying(255),
     website character varying(255),
-    npwp character varying(255),
-    nomer_pokok_wajib_pajak character varying(255)
+    npwp character varying(255)
 );
 
 ALTER TABLE ONLY institusi
