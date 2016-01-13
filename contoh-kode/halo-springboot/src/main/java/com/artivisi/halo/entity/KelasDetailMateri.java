@@ -26,4 +26,38 @@ public class KelasDetailMateri {
 	
 	@Column(nullable = false)
 	private Integer urutan;
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public Materi getMateri() {
+		return materi;
+	}
+
+	public void setMateri(Materi materi) {
+		this.materi = materi;
+	}
+
+	public Kelas getKelas() {
+		return kelas;
+	}
+
+	public void setKelas(Kelas kelas) {
+		this.kelas = kelas;
+	}
+
+	public Integer getUrutan() {
+		return urutan;
+	}
+
+	public void setUrutan(Integer urutan) {
+		this.urutan = urutan;
+	}
+	
+	
 }
