@@ -23,4 +23,5 @@ public class Institusi {
 	private String alamat;
 	private String website;
 	private String telepon;
+	private String nomerPokokWajibPajak;
 }
