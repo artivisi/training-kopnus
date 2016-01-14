@@ -25,7 +25,8 @@ CREATE TABLE peserta (
     email character varying(100) NOT NULL,
     kode character varying(20) NOT NULL,
     nama character varying(255) NOT NULL,
-    tanggal_lahir date NOT NULL
+    tanggal_lahir date NOT NULL,
+    id_institusi character varying(32) NOT NULL
 );
 
 ALTER TABLE ONLY peserta
@@ -36,6 +37,9 @@ ALTER TABLE ONLY peserta
 
 ALTER TABLE ONLY peserta
     ADD CONSTRAINT unique_kode UNIQUE (kode);
+    
+ALTER TABLE ONLY peserta
+    ADD CONSTRAINT fk_peserta_institusi FOREIGN KEY (id_institusi) REFERENCES institusi(id);
 
 CREATE TABLE kelas (
     id character varying(255) NOT NULL,
