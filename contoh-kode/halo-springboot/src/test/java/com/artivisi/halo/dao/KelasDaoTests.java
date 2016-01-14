@@ -54,15 +54,32 @@ public class KelasDaoTests {
 		
 		List<Kelas> hasil = kelasDao.findByTanggalMulaiBetween(mulai, sampai);
 		Assert.assertNotNull(hasil);
-		Assert.assertEquals(1, hasil.size());
+		Assert.assertEquals(2, hasil.size());
 		
-		Date mulai2 = Date.from(LocalDate.parse("2016-02-01")
+		Date mulai2 = Date.from(LocalDate.parse("2016-03-01")
+				.atStartOfDay()
+				.atZone(ZoneId.systemDefault())
+				.toInstant());
+		
+		Date sampai2 = Date.from(LocalDate.parse("2016-10-01")
+				.plusMonths(1)
 				.atStartOfDay()
 				.atZone(ZoneId.systemDefault())
 				.toInstant());
 				
-		List<Kelas> hasil2 = kelasDao.findByTanggalMulaiBetween(mulai2, sampai);
+		List<Kelas> hasil2 = kelasDao.findByTanggalMulaiBetween(mulai2, sampai2);
 		Assert.assertNotNull(hasil2);
 		Assert.assertTrue(hasil2.isEmpty());
+	}
+		
+	@Test
+	public void testCariKelasYangDihadiriPesertaDenganNama(){
+		List<Kelas> hasil = kelasDao.cariKelasYangDihadiriPesertaDenganNama("adi");
+		Assert.assertNotNull(hasil);
+		Assert.assertEquals(2, hasil.size());
+		
+		List<Kelas> hasil2 = kelasDao.cariKelasYangDihadiriPesertaDenganNama("endy");
+		Assert.assertNotNull(hasil2);
+		Assert.assertEquals(1, hasil2.size());
 	}
 }
