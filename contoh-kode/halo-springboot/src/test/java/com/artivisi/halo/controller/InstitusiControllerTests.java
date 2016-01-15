@@ -32,6 +32,7 @@ public class InstitusiControllerTests {
 	@After
 	public void hapusSampleData(){
 		institusiDao.delete("artivisi");
+		institusiDao.delete("itmn");
 	}
 	
 	@Test
@@ -39,7 +40,7 @@ public class InstitusiControllerTests {
 		Map<String, Object> hasil = httpClient.getForObject(url, Map.class);
 		Assert.assertNotNull(hasil);
 		System.out.println("Total Elements : "+hasil.keySet());
-		Assert.assertEquals(Long.valueOf(1), 
+		Assert.assertEquals(Long.valueOf(2), 
 				Long.valueOf(hasil.get("totalElements").toString()));
 		
 	}

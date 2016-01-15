@@ -60,7 +60,7 @@ public class InstitusiDaoTests {
 	
 	@Test
 	public void testHitungRecord(){
-		Assert.assertEquals(1L, institusiDao.count());
+		Assert.assertEquals(2L, institusiDao.count());
 	}
 	
 	@Test
@@ -86,8 +86,8 @@ public class InstitusiDaoTests {
 		Page<Institusi> hasilQuery = institusiDao.findAll(new PageRequest(0, 10));
 		Assert.assertNotNull(hasilQuery);
 		Assert.assertEquals(1, hasilQuery.getTotalPages());
-		Assert.assertEquals(1, hasilQuery.getTotalElements());
-		Assert.assertEquals(1, hasilQuery.getNumberOfElements());
+		Assert.assertEquals(2, hasilQuery.getTotalElements());
+		Assert.assertEquals(2, hasilQuery.getNumberOfElements());
 		Assert.assertEquals(0, institusiDao.findAll(new PageRequest(1, 10)).getNumberOfElements());
 	}
 }
