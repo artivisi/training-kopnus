@@ -2,6 +2,27 @@
     
     <head>
         <title>Belajar Angular 2</title>
+        
+        <!-- 1. Load Library yang dibutuhkan -->
+        <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+        <script src="node_modules/systemjs/dist/system.src.js"></script>
+        <script src="node_modules/rxjs/bundles/Rx.js"></script>
+        <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    
+        <!-- 2. Inisialisasi Aplikasi dengan SystemJS -->
+        <script>
+            System.config({
+                packages: {
+                    app: {
+                        format: 'register',
+                        defaultExtension: 'js'
+                    }
+                }
+            });
+            
+            System.import('app/boot')
+            .then(null, console.error.bind(console));
+        </script>
     </head>
     
     <body>
