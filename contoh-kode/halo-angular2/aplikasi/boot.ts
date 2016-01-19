@@ -1,4 +1,7 @@
 import {bootstrap} from 'angular2/platform/browser';
-import {Halo} from './halo/halo.component';
+import {ROUTER_PROVIDERS} from 'angular2/router';
+import {Aplikasi} from './aplikasi';
 
-bootstrap(Halo);
+bootstrap(Aplikasi, [
+    ROUTER_PROVIDERS
+]);
