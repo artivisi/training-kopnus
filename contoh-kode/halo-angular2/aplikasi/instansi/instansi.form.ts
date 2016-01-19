@@ -4,7 +4,7 @@ import {Instansi} from './instansi';
 import {InstansiService} from './instansi.service';
 
 @Component({
-    templateUrl: './aplikasi/instansi/instansi-form.html',
+    templateUrl: './aplikasi/instansi/instansi.form.html',
     selector: '<instansi-form>'
 })
 export class InstansiForm {

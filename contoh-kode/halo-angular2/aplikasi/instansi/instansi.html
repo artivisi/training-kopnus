@@ -1,26 +1,6 @@
 <h2>Daftar Instansi<h2>
 
-<div *ngIf="daftarInstansi.length < 1">Tidak ada data</div>
-
-<table *ngIf="daftarInstansi.length > 0" class="table table-condensed table-bordered">
-    <thead>
-        <tr>
-            <th>Kode</th>
-            <th>Nama</th>
-            <th>&nbsp;</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="#i of daftarInstansi">
-            <td>{{ i.kode }}</td>
-            <td>{{ i.nama }}</td>
-            <td>
-                <button>edit</button>
-                <button>hapus</button>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<instansi-list></instansi-list>
 
 <h2>Entri Data Instansi</h2>
 
