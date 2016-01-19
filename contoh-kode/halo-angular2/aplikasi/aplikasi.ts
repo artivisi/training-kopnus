@@ -2,7 +2,7 @@ import {Component} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 
 import {Halo} from './halo/halo.component';
-import {Instansi} from './instansi/instansi.component';
+import {InstansiComponent} from './instansi/instansi.component';
 import {Peserta} from './peserta/peserta.component';
 import {Kelas} from './kelas/kelas.component';
 
@@ -13,7 +13,7 @@ import {Kelas} from './kelas/kelas.component';
 })
 @RouteConfig([
     {path:'/', name: 'Halo', component: Halo, useAsDefault: true},
-    {path:'/instansi', name: 'Instansi', component: Instansi},
+    {path:'/instansi', name: 'Instansi', component: InstansiComponent},
     {path:'/peserta', name: 'Peserta', component: Peserta},
     {path:'/kelas', name: 'Kelas', component: Kelas}
 ])
