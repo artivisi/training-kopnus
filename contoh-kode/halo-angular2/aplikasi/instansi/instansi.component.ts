@@ -1,15 +1,21 @@
 import {Component} from 'angular2/core';
 
 import {Instansi} from './instansi';
+import {InstansiService} from './instansi.service';
 
 @Component({
     templateUrl: './aplikasi/instansi/instansi.html'
 })
 export class InstansiComponent{
     
-    daftarInstansi = [
-        new Instansi("AI-001", "ArtiVisi Intermedia"),
-        new Instansi("CMS-001", "PT. CMS")
-    ];
+    private _instansiService: InstansiService;
+    
+    constructor(instansiService: InstansiService){
+        this._instansiService = instansiService;
+    }
+    
+    get daftarInstansi(){
+        return this._instansiService.daftarInstansi;
+    }
     
 }
