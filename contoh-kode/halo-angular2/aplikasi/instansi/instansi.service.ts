@@ -9,4 +9,8 @@ export class InstansiService {
     get daftarInstansi(){
         return this._daftarInstansi;
     }
+    
+    simpan(instansi: Instansi){
+        this._daftarInstansi.push(instansi);
+    }
 }

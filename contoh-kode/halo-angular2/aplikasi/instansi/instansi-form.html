@@ -1,0 +1,15 @@
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="kodeInstansi">Kode</label>
+    <input type="text" class="form-control" 
+        [(ngModel)]="instansi.kode"
+        id="kodeInstansi" placeholder="Kode Instansi">
+  </div>
+  <div class="form-group">
+    <label for="namaInstansi">Nama</label>
+    <input type="text" class="form-control" 
+        [(ngModel)]="instansi.nama"
+    id="namaInstansi" placeholder="Nama Instansi">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>

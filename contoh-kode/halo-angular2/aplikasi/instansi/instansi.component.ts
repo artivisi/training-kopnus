@@ -1,21 +1,19 @@
 import {Component} from 'angular2/core';
 
 import {Instansi} from './instansi';
+import {InstansiForm} from './instansi.form';
 import {InstansiService} from './instansi.service';
 
 @Component({
-    templateUrl: './aplikasi/instansi/instansi.html'
+    templateUrl: './aplikasi/instansi/instansi.html',
+    directives: [InstansiForm]
 })
 export class InstansiComponent{
     
-    private _instansiService: InstansiService;
-    
-    constructor(instansiService: InstansiService){
-        this._instansiService = instansiService;
-    }
+    constructor(private instansiService: InstansiService){ }
     
     get daftarInstansi(){
-        return this._instansiService.daftarInstansi;
+        return this.instansiService.daftarInstansi;
     }
     
 }
