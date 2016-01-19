@@ -13,20 +13,21 @@
         <script>
             System.config({
                 packages: {
-                    app: {
-                        format: 'register',
+                    aplikasi: {
                         defaultExtension: 'js'
                     }
                 }
             });
             
-            System.import('app/boot')
+            System.import('aplikasi/boot')
             .then(null, console.error.bind(console));
         </script>
     </head>
     
     <body>
         <h1>Belajar Angular 2</h1>
+        
+        <halo-angular>Loading ... </halo-angular>
     </body>
     
 </html>
