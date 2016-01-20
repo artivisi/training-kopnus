@@ -1,16 +1,20 @@
+import {Injectable} from 'angular2/core';
+import {Http, Response} from 'angular2/http';
+import 'rxjs/Rx';
 import {Instansi} from './instansi';
 
+@Injectable()
 export class InstansiService {
-    _daftarInstansi = [
-        new Instansi("AI-001", "ArtiVisi Intermedia"),
-        new Instansi("CMS-001", "PT. CMS")
-    ];
+    _serverUrl: string = "/api/institusi/";
     
-    get daftarInstansi(){
-        return this._daftarInstansi;
+    constructor(private serverApi: Http){}
+    
+    getDaftarInstansi(){
+        return this.serverApi.get(this._serverUrl)
+                   .map((res: Response) => res.json());
     }
     
     simpan(instansi: Instansi){
-        this._daftarInstansi.push(instansi);
+        console.log('belum dibuat');
     }
 }

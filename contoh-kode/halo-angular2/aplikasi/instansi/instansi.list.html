@@ -1,21 +1,27 @@
-<div *ngIf="daftarInstansi.length < 1">Tidak ada data</div>
+<div *ngIf="!daftarInstansi">
+    loading ....
+</div>
 
-<table *ngIf="daftarInstansi.length > 0" class="table table-condensed table-bordered">
-    <thead>
-        <tr>
-            <th>Kode</th>
-            <th>Nama</th>
-            <th>&nbsp;</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="#i of daftarInstansi">
-            <td>{{ i.kode }}</td>
-            <td>{{ i.nama }}</td>
-            <td>
-                <button>edit</button>
-                <button>hapus</button>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div *ngIf="daftarInstansi">
+    <div *ngIf="daftarInstansi.totalElements < 1">Tidak ada data</div>
+
+    <table *ngIf="daftarInstansi.totalElements > 0" class="table table-condensed table-bordered">
+        <thead>
+            <tr>
+                <th>Kode</th>
+                <th>Nama</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="#i of daftarInstansi.content">
+                <td>{{ i.kode }}</td>
+                <td>{{ i.nama }}</td>
+                <td>
+                    <button>edit</button>
+                    <button>hapus</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
