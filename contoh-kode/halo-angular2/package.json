@@ -6,7 +6,7 @@
   "scripts": {
     "tsc": "tsc",
     "tsc:w": "tsc -w -t 'ES5'",
-    "webserver": "http-server --proxy http://localhost:9090",
+    "webserver": "http-server",
     "start": "concurrent \"npm run tsc:w\" \"npm run webserver\" "
   },
   "author": "",

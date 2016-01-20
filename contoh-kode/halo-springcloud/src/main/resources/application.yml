@@ -1,0 +1,12 @@
+server:
+  port: 10000
+
+zuul:
+  routes:
+    trainingApi:
+      path: /api/**
+      stripPrefix: false
+      url: http://localhost:9090
+    angular:
+      path: /**
+      url: http://localhost:8080
