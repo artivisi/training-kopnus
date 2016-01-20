@@ -1,3 +1,5 @@
+import {Injectable} from 'angular2/core';
+
 export class AuthService {
     _uservalid: string = "endy";
     _passwordvalid: string = "123";
