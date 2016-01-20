@@ -12,7 +12,7 @@ import com.artivisi.halo.dao.InstitusiDao;
 import com.artivisi.halo.entity.Institusi;
 
 @RestController
-@RequestMapping("/institusi")
+@RequestMapping("/api/institusi")
 public class InstitusiController {
 	
 	@Autowired private InstitusiDao institusiDao;

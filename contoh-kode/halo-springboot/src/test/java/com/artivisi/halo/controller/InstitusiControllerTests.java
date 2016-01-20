@@ -25,7 +25,7 @@ import com.artivisi.halo.entity.Institusi;
 public class InstitusiControllerTests {
 	
 	private RestTemplate httpClient = new TestRestTemplate();
-	private String url = "http://localhost:9090/institusi/";
+	private String url = "http://localhost:9090/api/institusi/";
 	
 	@Autowired private InstitusiDao institusiDao;
 	
