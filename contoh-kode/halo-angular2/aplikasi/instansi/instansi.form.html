@@ -1,9 +1,13 @@
-<form (ngSubmit)="onSubmit()">
+<form (ngSubmit)="onSubmit()" #formInstansi="ngForm">
   <div class="form-group">
     <label for="kodeInstansi">Kode</label>
-    <input type="text" class="form-control" 
+    <input type="text" class="form-control" required
         [(ngModel)]="instansi.kode"
+        ngControl="kode"  #kode="ngForm"
         id="kodeInstansi" placeholder="Kode Instansi">
+     <div [hidden]="kode.valid" class="alert alert-danger">
+         Kode harus diisi
+     </div>
   </div>
   <div class="form-group">
     <label for="namaInstansi">Nama</label>
@@ -11,5 +15,7 @@
         [(ngModel)]="instansi.nama"
     id="namaInstansi" placeholder="Nama Instansi">
   </div>
-  <button type="submit" class="btn btn-default">Submit</button>
+  <button type="submit" 
+        [disabled]="!formInstansi.form.valid"
+        class="btn btn-default">Submit</button>
 </form>
