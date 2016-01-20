@@ -8,10 +8,12 @@ import {LocationStrategy,HashLocationStrategy} from 'angular2/router';
 
 import {Aplikasi} from './aplikasi';
 import {InstansiService} from './instansi/instansi.service';
+import {AuthService} from './auth/auth.service';
 
 bootstrap(Aplikasi, [
     ROUTER_PROVIDERS,
     HTTP_PROVIDERS,
     InstansiService,
+    AuthService,
     provide(LocationStrategy, {useClass: HashLocationStrategy})
 ]);
