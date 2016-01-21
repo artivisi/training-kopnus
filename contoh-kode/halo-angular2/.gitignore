@@ -1,5 +1,6 @@
 # Ignore NodeJS Packages
 node_modules
+npm-debug.log
 
 # Ignore Hasil Compile TypeScript
 *.js
